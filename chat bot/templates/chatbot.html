@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayHalo</title>
+    <link rel="stylesheet" href="static\css\chatbot.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-and-title">
+                <div class="logo">
+                    <img src="static/img/logo.png" alt="SayHalo Logo">
+                </div>
+                <h1>Welcome to DermBot</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Ready to care for your skin?</h2>
+            <p>Get quick skin insights, predictions, and tips with AI assistance!</p>
+            
+            <!-- Card container that will disappear after chat starts -->
+            <div class="card-container" id="card-container">
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/8023/8023926.png" alt="Skin Check Icon">
+                    </div>
+                    <h3>Skin Disease Prediction</h3>
+                    <p>Get accurate insights based on symptoms</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4711/4711987.png" alt="AI Icon">
+                    </div>
+                    <h3>DermBot AI: How It Works</h3>
+                    <p>Discover the technology behind the predictions</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/17371/17371236.png" alt="Health Icon">
+                    </div>
+                    <h3>Skin Health Tips 2024</h3>
+                    <p>Explore the latest skin care trends and advice</p>
+                </div>
+            </div>
+
+            <!-- Chat history that will appear after starting the conversation -->
+            <div id="chat-history" class="chat-history"></div>
+
+            <!-- Input bar with image upload icon and text input -->
+            <div id="prediction-result" style="text-align: center;"></div>
+
+            <form id="chat-form">
+                <div class="input-container">
+                    <label for="file-upload">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3249/3249934.png" alt="Upload Icon" class="upload-icon">
+                    </label>
+                    <input type="file" id="file-upload" name="file" accept="image/*" style="display: none;">
+                    <input type="text" name="user_question" placeholder="Ask SayHalo anything..." required>
+                    <button type="submit" id="send">Send</button>
+                </div>
+            </form>
+
+
+            <div id="prediction-result"></div>
+        </div>
+    </div>
+
+    <script src="static\js\chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Skin Disease Severity Predictor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Skin Disease Severity Predictor</h1>
+        <form id="predictForm">
+            <label for="disease">Disease Name:</label>
+            <select id="disease" name="disease" required>
+                <option value="">Select a disease</option>
+                <option value="Candidiasis">Candidiasis</option>
+                <option value="Basal Cell Carcinoma">Basal Cell Carcinoma</option>
+                <option value="Psoriasis">Psoriasis</option>
+                <option value="Warts">Warts</option>
+                <option value="Molluscum Contagiosum">Molluscum Contagiosum</option>
+            </select>
+
+            <label for="dryness">Dryness:</label>
+            <select id="dryness" name="dryness" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <label for="redness">Redness:</label>
+            <select id="redness" name="redness" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <label for="swelling">Swelling:</label>
+            <select id="swelling" name="swelling" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <label for="oozing">Oozing:</label>
+            <select id="oozing" name="oozing" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <label for="scratching">Scratching:</label>
+            <select id="scratching" name="scratching" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <label for="thickening">Thickening:</label>
+            <select id="thickening" name="thickening" required>
+                <option value="0">No</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <button type="submit">Predict Severity</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('predictForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            document.getElementById('result').innerHTML = `Disease: ${data.disease}, Predicted Severity: ${data.predicted_severity}`;
+        });
+    </script>
+</body>
+</html>
