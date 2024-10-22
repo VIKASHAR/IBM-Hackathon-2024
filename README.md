@@ -1,25 +1,34 @@
-# Skin Disease Prediction Chatbot
+# DermBot - Skin Disease and Severity Prediction Chatbot
 
-This project is a chatbot that predicts skin diseases based on either an image input of the affected area or text describing the symptoms. The project was developed as part of the IBM Hackathon, utilizing IBM Cloud and Watson AI services to build a reliable, scalable, and intelligent chatbot system.
+DermBot is a chatbot that predicts **both skin diseases and their severity** based on either an image input of the affected area or text describing the symptoms. The project was developed as part of the IBM Hackathon, utilizing IBM Cloud and Watson AI services to build a reliable, scalable, and intelligent chatbot system.
 
 ## Features
 - Accepts both image and text inputs to analyze symptoms.
 - Uses a machine learning model for image classification to predict potential skin diseases.
+- **Predicts the severity** of the disease (e.g., mild, moderate, severe) based on the input.
 - Leverages natural language processing (NLP) for text-based symptom analysis.
-- Deployed using IBM Cloud and integrated with IBM Watson AI services for image recognition and NLP tasks.
+- Designed for future cloud deployment using IBM Cloud and Watson AI services.
 
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python, Flask
 - **Machine Learning**: TensorFlow/Keras, IBM Watson AI
-- **Cloud Services**: IBM Cloud for deployment, IBM Watson AI for image and text analysis
-- **Database**: IBM Cloud Databases (optional for storing user inputs and predictions)
+- **Cloud Services**: IBM Cloud for potential future deployment, IBM Watson AI for image and text analysis
 
 ## How It Works
-1. **Image Input**: Upload an image of the affected skin area, and the chatbot will predict potential skin diseases using the trained image classification model.
-2. **Text Input**: Describe your symptoms, and the chatbot will use NLP models to predict potential skin diseases based on your description.
+1. **Image Input**: Upload an image of the affected skin area, and DermBot will predict both the potential skin diseases and the severity level (e.g., mild, moderate, severe) using the trained image classification model.
+2. **Text Input**: Describe your symptoms, and DermBot will use NLP models to predict potential skin diseases and estimate the severity based on the textual description.
+
+## Dataset for Image and Severity Prediction
+![Screenshot 2024-10-20 115135](https://github.com/user-attachments/assets/94560a53-cf13-4d67-813d-2abad4dd6101)
+
+## Training Model using IBM VM
+![Screenshot 2024-10-20 114906](https://github.com/user-attachments/assets/696c1b87-e541-4886-981d-c3459ac5e9e7)
 
 ## Running the Project Locally
+![Screenshot 2024-10-20 090454](https://github.com/user-attachments/assets/922da110-4441-4cdb-9e31-625be940f59f)
+
+![Screenshot 2024-10-20 090454](https://github.com/user-attachments/assets/75548543-28ba-4bd0-8d5e-eb859d59834f)
 
 ### Prerequisites
 - Python 3.x
@@ -32,5 +41,5 @@ This project is a chatbot that predicts skin diseases based on either an image i
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/skin-disease-prediction-chatbot.git
-   cd skin-disease-prediction-chatbot
+   git clone https://github.com/yourusername/dermbot-skin-disease-prediction.git
+   cd dermbot-skin-disease-prediction
