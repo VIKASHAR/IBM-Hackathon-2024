@@ -39,10 +39,14 @@ DermBot is a chatbot that predicts **both skin diseases and their severity** bas
 
 ### Usage
 Upload an image or describe your symptoms in the provided input fields.
+
 DermBot will process the input and provide a prediction for both the skin disease and its severity along with some recommendations.
 
 ### Future Enhancements
 Cloud Deployment: Deploy the chatbot on IBM Cloud for global accessibility.
+
 Improve the accuracy of image classification models by training on a larger dataset.
+
 Integrate a more advanced NLP model for better text-based predictions.
+
 Add user authentication and history tracking for returning users.
