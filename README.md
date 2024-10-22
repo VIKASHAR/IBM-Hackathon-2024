@@ -37,9 +37,12 @@ DermBot is a chatbot that predicts **both skin diseases and their severity** bas
 - IBM Cloud account (for Watson AI services)
 - IBM Watson SDK
 
-### Installation
+### Usage
+Upload an image or describe your symptoms in the provided input fields.
+DermBot will process the input and provide a prediction for both the skin disease and its severity along with some recommendations.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/dermbot-skin-disease-prediction.git
-   cd dermbot-skin-disease-prediction
+### Future Enhancements
+Cloud Deployment: Deploy the chatbot on IBM Cloud for global accessibility.
+Improve the accuracy of image classification models by training on a larger dataset.
+Integrate a more advanced NLP model for better text-based predictions.
+Add user authentication and history tracking for returning users.
