@@ -26,8 +26,11 @@ DermBot is a chatbot that predicts **both skin diseases and their severity** bas
 ![Screenshot 2024-10-20 114906](https://github.com/user-attachments/assets/696c1b87-e541-4886-981d-c3459ac5e9e7)
 
 ## Running the Project Locally
+
+# Chatbot
 ![Screenshot 2024-10-20 090127](https://github.com/user-attachments/assets/d8fc4ea3-8bb0-44b1-ba52-7d9a1d5fc115)
 
+# Severity Prediction
 ![Screenshot 2024-10-20 090454](https://github.com/user-attachments/assets/75548543-28ba-4bd0-8d5e-eb859d59834f)
 
 ### Prerequisites
